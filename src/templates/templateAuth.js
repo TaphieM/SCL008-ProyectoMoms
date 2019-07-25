@@ -9,18 +9,7 @@ import './css/templateAuth.css';
 class templateAuth extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      onOpen: false,
-   }
-    this.sendToDataBase = this.sendToDataBase.bind(this);  
-  }
-
-   handleOpenModal= () =>{
-     this.setState({onOpen:true}) 
-   }
-  
-  handleCloseModal= e =>{
-    this.setState({onOpen:false})
+    this.sendToDataBase = this.sendToDataBase.bind(this); 
   }
 
   sendToDataBase() {
@@ -50,7 +39,6 @@ class templateAuth extends Component {
                 className="btn_login"
                 buttonOnClick={(evt) => {
                   this.sendToDataBase(evt);
-                  this.handleOpenModal();
                 }}
               />
             </Form>
@@ -58,8 +46,7 @@ class templateAuth extends Component {
             confirmation="Se ha creado tu cuenta"
             message="¡Felicitaciones!"
             text="te hemos enviado un correo de verificación"
-            onClose={this.handleCloseModal}
-            onOpen={this.state.onOpen}
+        
             />
           </section>
         )}

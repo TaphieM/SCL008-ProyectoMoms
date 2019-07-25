@@ -3,7 +3,7 @@ import './css/componentVisualModal.css';
 
 
 const ComponentVisualModal = (props) => {
- if (!props.isOpen) {
+if (!props.modalIsOpen) {
     return null;
   }
   return( 
@@ -13,7 +13,7 @@ const ComponentVisualModal = (props) => {
         <p className="confirmation">{props.confirmation}</p>
         <h2 className="message">{props.message}</h2>
          <p className="text">{props.text}</p>
-         <button className="close-btn" onClick={props.onClose}>Entendido</button>
+         <button className="close-btn" onClick={props.onCloseModal}>Entendido</button>
        </div>
        </div>  
     </div>
